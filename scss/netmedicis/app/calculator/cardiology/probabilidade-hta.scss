@@ -1,0 +1,15 @@
+.probabilidade-hta {
+  
+  .type {
+    &.low {
+      background-color: $balanced !important;
+    }
+    &.moderate {
+      background-color: $energized !important;
+    }
+    &.high {
+      background-color: $assertive !important;
+    }
+  }
+  
+}

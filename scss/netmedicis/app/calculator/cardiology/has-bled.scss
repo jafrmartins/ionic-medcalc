@@ -1,0 +1,40 @@
+.has-bled {
+
+	.anual-risk {
+
+		.header {
+			.label::after,
+			.legend::before {
+				content: '1)';
+			}
+		}
+		
+		.type {
+
+      &.low {
+        background-color: $balanced !important;
+      }
+      &.moderate {
+        background-color: $energized !important;
+      }
+      &.high {
+        background-color: $assertive !important;
+      }
+
+    }
+
+
+	}
+
+	.score {
+
+		.header {
+			.label::after,
+			.legend::before {
+				content: '2)';
+			}
+		}
+
+	}
+
+}

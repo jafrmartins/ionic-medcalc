@@ -1,0 +1,23 @@
+<label class="item item-input item-stacked-label">
+  <span class="input-label">{{ wizardFormElement.name | t | translate }}</span>
+  <input app-wizard-input tabindex={{wizardFormElement.index}} name="{{wizardFormElement.name}}" type="number"
+    ng-required="true"
+    ng-min="wizardFormElement.min || 0"
+    ng-max="wizardFormElement.max || 999"
+    ng-pattern="wizardFormElement.pattern || '^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$'"
+    ng-model="wizardFormModel[wizardFormElement.name]"/>
+  <div class="input-error" ng-show="wizardForm[wizardFormElement.name].$dirty && wizardForm[wizardFormElement.name].$invalid">
+    <span class="item-text-wrap" ng-show="wizardForm[wizardFormElement.name].$error.required">
+      <span class="input-error-prefix">{{ 'FORM_INPUT_ERROR' | translate }}&nbsp;:</span>
+      {{ wizardFormElement.requiredError || 'FORM_INPUT_ERROR_REQUIRED' | translate }}
+    </span>
+    <span class="item-text-wrap" ng-show="wizardForm[wizardFormElement.name].$error.min">
+      <span class="input-error-prefix">{{ 'FORM_INPUT_ERROR' | translate }}&nbsp;:</span>
+      {{ wizardFormElement.minError || 'FORM_INPUT_ERROR_MIN' | translate }}
+    </span>
+    <span class="item-text-wrap" ng-show="wizardForm[wizardFormElement.name].$error.max">
+      <span class="input-error-prefix">{{ 'FORM_INPUT_ERROR' | translate }}&nbsp;:</span>
+      {{ wizardFormElement.maxError || 'FORM_INPUT_ERROR_MAX' | translate }}
+    </span>
+  </div>
+</label>

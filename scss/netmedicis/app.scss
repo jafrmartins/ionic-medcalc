@@ -1,0 +1,61 @@
+
+@import "./app/search.scss";
+@import "./app/market.scss";
+@import "./app/wizard.scss";
+@import "./app/calculator.scss";
+
+.app {
+
+  button[menu-toggle="left"] {
+    height: 50px;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    .logo {
+      height: 44px;
+    }
+  }
+  
+  button[menu-toggle="right"] {
+    i {
+      font-size: 30px !important;
+    }
+  }
+  
+  .auth-side-menu {
+    .title {
+      color: $grey !important;
+      text-align: center !important;
+    }
+    .logout-button {
+      margin: 0 !important;
+      height: 54px !important;
+    }
+  }
+
+  .app-side-menu {
+    .list {
+      ion-item {
+        a {
+          background-color: $positive !important;
+          i {
+            margin-left: 2px;
+            color: $light !important;
+          }
+          .label {
+            display: none;
+          }
+        }
+        &.active {
+          a {
+            background-color: $light !important;
+            i {
+              color: $positive !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}

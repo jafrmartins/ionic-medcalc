@@ -1,0 +1,77 @@
+.tos-popup {
+
+	background-color: $stable;
+	min-height: 345px;
+
+	.popup-head {
+		.popup-title {
+			font-size: 25px;
+			color: $positive;
+		}
+		.popup-sub-title {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	.popup-body {
+		.terms-of-usage {
+			padding: 5px 7.5px 5px 7.5px;
+			.text {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.popup-buttons {
+		button {
+			color: $light;
+			background-color: $positive;
+		}
+	}
+
+}
+
+.auth-popup {
+  height: auto !important;
+  .popup-head {
+    background-color: $assertive !important;
+    padding: 12px !important;
+		.popup-title,
+    .popup-sub-title {
+      padding: 0px;
+      color: $light !important;
+			text-transform: capitalize;
+      font-weight: bold;
+		}
+    .popup-title {
+      font-size: 20px !important;
+    }
+		.popup-sub-title {
+			font-size: 15px !important;
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+  .item {
+    font-weight: bold;
+    color: $assertive !important;
+    text-transform: capitalize;
+  }
+  
+  .popup-head,
+  .popup-buttons {
+    padding: 0px;
+  }
+
+  .popup-buttons {
+    button {
+      font-size: 20px;
+      font-weight: bold;
+      color: $light !important;
+      background-color: $assertive !important;
+    }
+  }
+
+}

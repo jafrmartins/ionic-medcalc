@@ -1,0 +1,35 @@
+<ion-pane class="calculator-output">
+  <ion-content class="cha2ds2-vasc">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'CHA2DS2_VASC_LABEL' | translate }}</div>
+      <div class="units">{{ 'CHA2DS2_VASC_FORMULAS' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item sc">
+      <div class="header">
+        <div class="label">{{ 'CHA2DS2_VASC_SCORE_LABEL' | translate }}</div>
+        <!--<div class="legend">{{ 'CHA2DS2_VASC_SCORE_LEGEND' | translate }}</div>-->
+      </div>
+      <div class="value" ng-bind="output.score"></div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item rg">
+      <div class="header">
+        <div class="label">{{ 'CHA2DS2_VASC_RISK_GROUP_LABEL' | translate }}</div>
+        <!--<div class="legend">{{ 'CHA2DS2_VASC_RISK_GROUP_LEGEND' | translate }}</div>-->
+      </div>
+      <div class="value">{{ 'CHA2DS2_VASC_RISK_' + output.riskGroup | translate }}</div>
+      <div ng-class="{
+          'type low': (output.riskGroup == 'LOW'),
+          'type moderate': (output.riskGroup == 'MODERATE'),
+          'type high': (output.riskGroup == 'HIGH')
+        }"><span>{{ 'CHA2DS2_VASC_' + output.riskGroup + '_RISK_SUGGESTION' | translate }}</span>
+      </div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item asr">
+      <div class="header">
+        <div class="label">{{ 'CHA2DS2_VASC_ANUAL_STROKE_RISK' | translate }}</div>
+        <!--<div class="legend">{{ 'CHA2DS2_VASC_ANUAL_STROKE_RISK_STUDY' | translate }}</div>-->
+      </div>
+      <div class="value">{{ output.anualRisk }}<i class="percent"></i></div>
+    </div>
+  </ion-content>
+</ion-pane>

@@ -1,0 +1,20 @@
+{
+  "GFR_GENDER_TXT": "Please select the patient's gender.",
+  "GFR_GENDER_MALE": "Male",
+  "GFR_GENDER_FEMALE": "Female",
+  "GFR_RACE_TXT": "Please select the patient's etnicity.",
+  "GFR_RACE_BLACK": "Afro-American",
+  "GFR_RACE_WHITEOROTHER": "Caucasien / Other",
+  "GFR_AGE": "Age",
+  "GFR_AGE_TXT": "Please specify the patient's age.",
+  "GFR_WEIGHT": "Weight (kg)",
+  "GFR_WEIGHT_TXT": "Please specify the patient's weight (kg).",
+  "GFR_SERUM_CREATININE": "Serum Creatinine (mg/dL)",
+  "GFR_SERUM_CREATININE_TXT": "Please specify the Serum Creatinine density (mg/dL) available in the sample.",
+  "GFR_LABEL": "Glomerular Filtration Rate",
+  "GFR_UNIT": "(mL/min/1.73m²)",
+  "GFR_MDRD": "MDRD",
+  "GFR_MDRD_LABEL": "Modification of Diet - Renal Disease Study.",
+  "GFR_CKD_EPI": "CKD-EPI",
+  "GFR_CKD_EPI_LABEL": "Chronical Kidney Disease - Epidemiologique Study."
+}

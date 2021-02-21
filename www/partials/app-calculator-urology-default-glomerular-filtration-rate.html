@@ -1,0 +1,28 @@
+<ion-pane class="calculator-output">
+  <ion-content class="glomerular-filtration-rate">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'GFR_LABEL' | translate }}</div>
+      <div class="units">{{ 'GFR_UNIT' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item mdrd">
+      <div class="header">
+        <div class="label">{{ 'GFR_LABEL' | translate }}</div>
+        <div class="legend">{{ 'GFR_MDRD' | translate }}</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.mdrd }}</span>
+        <i class="dimension">[ml/min/1.73m²]</i>
+      </div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item ckd-epi">
+      <div class="header">
+        <div class="label">{{ 'GFR_LABEL' | translate }}</div>
+        <div class="legend">{{ 'GFR_CKD_EPI' | translate }}</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.ckd_epi }}</span>
+        <i class="dimension">[ml/min/1.73m²]</i>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

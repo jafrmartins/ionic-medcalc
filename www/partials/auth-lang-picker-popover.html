@@ -1,0 +1,15 @@
+<ion-popover-view class="lang-list-popover">
+  <ion-header-bar>
+    <h1 class="title">{{ 'FORM_AUTH_LANGUAGE' | translate }}</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="code in settings.i18n.langs"
+        ng-click="changeLang(code)">
+        <i ng-init="a2=(code == 'en') ? 'gb' : code;" 
+        class="flag-icon flag-icon-{{a2}}"></i>
+        <span>{{code}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-popover-view>

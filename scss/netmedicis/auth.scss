@@ -1,0 +1,87 @@
+.lang-list-popover {
+  height: 258px;
+}
+
+#auth {
+  
+  .logo {
+    height: 44px;
+  }
+  
+  .lang-picker {
+    
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    
+    .button {
+      
+      border: 0 none;
+      background-color: #fff;
+      
+      &:before {
+        font-size: 12.5px !important;
+        padding-left: 5px !important;
+      }
+       
+    }
+    
+  }
+  
+  .auth-content[background="true"] {
+    /*
+    background-image: url($path_auth_bg);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    */
+  }
+
+  label {
+    background-color: transparent !important;
+  }
+  
+  #auth-login,
+  #auth-register {
+    width: 100%;
+    margin-top: 20px;
+    & > div.card {
+      border-radius: 5px 5px 5px 5px;
+      background-color: rgba(255, 255, 255, 0.80);
+
+      .title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: $positive;
+      }
+
+      form, 
+      .form-container,
+      #login-form,
+      #register-form {
+        width: 100%;
+        input {
+          margin-right: 12.5px;
+        }
+        .ng-invalid {
+          padding-right: 0px;
+        }
+        .item-input-error {
+          position: absolute;
+          right: 0px;
+          color: $assertive !important;
+          font-weight: bold;
+          font-size: 20px;
+          font-style: italic;
+          padding: 10px;
+          line-height: 1;
+          border: 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  
+}

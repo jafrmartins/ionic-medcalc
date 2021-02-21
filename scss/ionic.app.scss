@@ -1,0 +1,62 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+
+// font awesome
+@import "./node_modules/font-awesome/scss/font-awesome";
+@import "./node_modules/flag-icon-css/sass/_flag-icon";
+@import "./node_modules/sass-mediaqueries/_media-queries.scss";
+
+$light: #ffffff !default;
+$stable: #dedede !default;
+$grey: #444444 !default;
+$positive: #1b4d75 !default;
+$calm: #0d7ba6 !default;
+$balanced: #00802b !default;
+$danger: #daa520 !default;
+$energized: #ff8000 !default;
+$assertive: #b30000 !default;
+$royal: #551a8b !default;
+$dark: #123 !default;
+
+//paths
+$path_auth_bg: "../img/auth/background.jpg"  !default;
+$path_app_bg: "../img/app/background.jpg"  !default;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+.fa {
+  color: $positive;
+}
+
+.copyright-footer {
+  .title {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    color: $positive !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    margin: auto !important;
+  }
+}
+
+@import "www/lib/ionic/scss/ionic";
+@import "./netmedicis/auth.scss";
+@import "./netmedicis/app.scss";
+@import "./netmedicis/popup.scss";
+@import "./netmedicis/spinner.scss";
+

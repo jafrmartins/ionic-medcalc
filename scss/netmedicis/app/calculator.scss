@@ -1,0 +1,144 @@
+@import "./calculator/cardiology/probabilidade-hta.scss";
+@import "./calculator/cardiology/cha2ds2-vasc.scss";
+@import "./calculator/cardiology/chads2.scss";
+@import "./calculator/cardiology/has-bled.scss";
+@import "./calculator/cardiology/escolha-aco.scss";
+@import "./calculator/general-medicine/anthropometry.scss";
+@import "./calculator/urology/glomerular-filtration-rate.scss";
+
+.calculator {
+  
+  .item {
+    border: 0;
+  }
+
+  .calculator-output {
+
+    .item {
+      border: 0;
+      div {
+        text-align: center;
+      }
+    }
+
+    .calculator-output-header {
+
+      display: none;
+      background-color: $positive;
+      color: $light;
+      
+      .title {
+        font-size: 40px;
+      }
+
+      .units {
+        font-size: 20px;
+        font-style: italic;
+        margin-top: 5px;
+        display: block;
+      }
+
+    }
+
+    .calculator-output-item {
+      
+      .header {
+        background-color: $stable;
+        color: $positive;
+        padding: 10px;
+        .label {
+          font-size: 30px;
+          &::after {
+            visibility: hidden;
+            display: none;
+            padding-left: 5px;
+	          font-size: 15px;
+	          vertical-align: top;
+            font-weight: 900;
+          }
+        }
+        
+        .legend {
+          font-size: 15px;
+          padding: 5px;
+          &::before {
+            visibility: hidden;
+            display: none;
+            padding-right: 5px;
+	          font-size: 12px;
+	          font-weight: 900;
+          }
+        }
+
+        .select-box {
+          .item-select {
+            height: 30px;
+            background-color: $stable;
+            select {
+              /*
+              width: 100px;
+              height: 30px;
+              right: 50%;
+              margin-right: -50px;
+              */
+              text-align: center;
+              text-align-last: center;
+              background-color: $stable;
+              min-width: 100%;
+              padding: 0;
+              color: $positive;
+              font-size: 20px;
+              font-weight: bold;
+              option {
+                text-align: left;
+                &::empty { display:none }
+              }
+              &::after {
+                color: $positive;
+              }
+            }
+          }
+        }
+      }
+
+      .value {
+        font-size: 45px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        .percent {
+          padding-right: 2.5px;
+          font-size: 75%;
+          &::after {
+            content: '%';
+          }
+        }
+        .dimension {
+          font-size: 15px;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+
+      .type {
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 0px 0px 5px 5px;
+        color: $light;
+        background-color: $positive;
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .item-text-wrap {
+    line-height: 1;
+  }
+
+  .publication {
+    font-weight: 600;
+    font-style: italic;
+    color: $positive;
+  }
+
+}

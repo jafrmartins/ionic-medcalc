@@ -1,0 +1,105 @@
+<ion-view id="auth" view-title="{{ 'LOGIN' | translate }}">
+  <auth-credentials></auth-credentials>
+  <ion-header-bar>
+    <img class="logo" src="img/logo.png" 
+      alt="{{ 'BRAND' | translate }} - {{ 'MOTO' | translate }}" />
+    <auth-lang-picker></auth-lang-picker>
+  </ion-header-bar>
+  <ion-content id="spinner-container" ng-show="hasCredentials"
+    scroll="false" class="has-header has-footer">
+    <ion-spinner icon="android"></ion-spinner>
+  </ion-content>
+  <ion-content class="has-footer auth-content" ng-show="!hasCredentials">
+    <div class="row">
+      <div id="auth-register">
+        <div class="card">
+          <div class="row">
+            <h3 class="title">{{ 'FORM_AUTH_LOGIN_TEXT' | translate }}</h3>
+          </div>
+          <div class="row">
+            <div class="form-container">
+              <form id="login-form" name="form.controller.login" ng-submit="login()" novalidate>
+                <div class="list">
+                  <div class="item item-input">
+                    <span class="input-label">{{ 'FORM_AUTH_EMAIL' | translate }}</span>
+                    <input name="login.email" type="email" ng-model="form.data.login.email" required />
+                    <button class="item-input-error" ng-show="isFormError('login','email')"
+                      ng-click="showFormError('login','email')">
+                      <i class="ion-alert-circled"></i>
+                    </button>
+                  </div>
+                  <div class="item item-input">
+                    <span class="input-label">{{ 'FORM_AUTH_PASSWORD' | translate }}</span>
+                    <input name="login.password" type="password" ng-model="form.data.login.password" ng-minlength="8" ng-maxlength="12" 
+                      ng-pattern="/^([a-zA-Z0-9@!$%&*#]{8,12})$/" required />
+                    <button class="item-input-error" ng-show="isFormError('login','password')"
+                      ng-click="showFormError('login','password')">
+                      <i class="ion-alert-circled"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="button button-full button-positive">
+                    {{ 'FORM_AUTH_LOGIN' | translate }}
+                  </button>
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="auth-login">
+        <div class="card">
+          <div class="row">
+            <h3 class="title">{{ 'FORM_AUTH_REGISTER_TEXT' | translate }}</h3>
+          </div>
+          <div class="row">
+            <div class="form-container">
+              <form id="register-form" name="form.controller.register" ng-submit="register()" novalidate>
+                <div class="list">
+                  <div class="item item-input">
+                    <span class="input-label">{{ 'FORM_AUTH_NAME' | translate }}</span>
+                    <input name="register.name" type="text" ng-model="form.data.register.name" 
+                      ng-minlength="4" ng-maxlength="256" ng-pattern="/^(\w\s)*\w+$/" required />
+                    <button class="item-input-error" ng-show="isFormError('register','name')"
+                      ng-click="showFormError('register','name')">
+                      <i class="ion-alert-circled"></i>
+                    </button>
+                  </div>
+                  <div class="item item-input">
+                    <span class="input-label">{{ 'FORM_AUTH_EMAIL' | translate }}</span>
+                    <input name="register.email" type="email" ng-model="form.data.register.email" required />
+                    <button class="item-input-error" ng-show="isFormError('register','email')" 
+                      ng-click="showFormError('register','email')">
+                      <i class="ion-alert-circled"></i>
+                    </button>
+                  </div>
+                  <div class="item item-input">
+                    <span class="input-label">{{ 'FORM_AUTH_PASSWORD' | translate }}</span>
+                    <input name="register.password" type="password" ng-model="form.data.register.password" 
+                      ng-minlength="8" ng-maxlength="12" 
+                      ng-pattern="/^([a-zA-Z0-9@!$%&*#]{8,12})$/" required />
+                    <button class="item-input-error" ng-show="isFormError('register','password')" 
+                      ng-click="showFormError('register','password')">
+                      <i class="ion-alert-circled"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="button button-full button-positive">
+                    {{ 'FORM_AUTH_REGISTER' | translate }}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="copyright-footer">
+    <div class="title">{{ copyright }}</div>
+  </ion-footer-bar>
+</ion-view>

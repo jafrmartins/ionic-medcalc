@@ -1,0 +1,7 @@
+<ion-view view-title="{{ 'FORM_CALCULATOR_OUTPUT' | translate }}">
+  <ion-pane ng-if="credentials">
+    <app-include ng-if="output"  
+      template="partials/app-calculator-{{s}}-{{p}}-{{c}}.html">
+    </app-include>
+  </ion-pane>
+</ion-view>

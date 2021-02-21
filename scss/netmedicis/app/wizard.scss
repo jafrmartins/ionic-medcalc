@@ -1,0 +1,154 @@
+.wizard {
+  
+  .header {
+    img {
+      position: absolute;
+      top: 4px;
+      height: 44px;
+    }
+  }
+
+  .score-trigger {
+    font-size: 25px;
+  }
+
+  .score-lbl {
+    margin-top: -5px;
+    padding: 0px;
+  }
+  
+  .list {
+    margin-bottom: 44px;
+  }
+  
+  .wizard-footer-pagination {
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    z-index: 999;
+    margin-left: -125px;
+    left: 50%;
+    text-align: center;
+    height: 50px;
+    padding: 16px;
+    .swiper-pagination-bullet {
+      margin: 3px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $positive;
+    }
+  }
+
+  .wizard-form {
+    height: 100%;
+    width: 100%;
+    .wizard-slides {
+      .input-slide {
+        .item {
+          &.nav,
+          &.question {
+            font-weight: bold;
+            font-size: 18px;
+            border: 0;
+            background-color: $stable;
+            color: $positive;
+            width: 100%;
+          }
+
+          &.question {
+            .small {
+              font-size: 12px;
+              display: block;
+              margin-top: 10px;
+            }
+          }
+          
+          .input-label {
+            color: $positive;
+            font-weight: bold;
+          }
+          
+          &[checked="checked"] {
+            .radio-icon {
+              visibility: visible !important;
+              color: $balanced;
+            } 
+          }
+        }
+      }
+    }
+    .scroll-content.error {
+      .question {
+        /*color: $assertive !important;*/
+      }
+      .input-label {
+        /*color: $assertive !important;*/
+      }
+    }
+    .input-error {
+      text-transform: capitalize;
+      color: $assertive !important;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+
+  .footer {
+    height: 50px;
+    bottom: 0px;
+    z-index: 999;
+    width: 100%;
+    background-color: transparent;
+    
+    .exit,
+    .previous {
+      position: absolute;
+      left: 0px;
+      z-index: 999;
+    }
+    
+    .next,
+    .continue {
+      position: absolute;
+      right: 0px;
+      z-index: 999;
+    }
+
+    .button {
+      background-color: #fff;
+      color: $positive;
+      line-height: 40px;
+      min-width: 40px;
+      font-size: 16px;
+      i { color: $positive; }
+      &.exit,
+      &.continue {
+        i { 
+          display: none;
+          visibility: hidden;
+          font-size: 25px;
+        }
+      }
+      
+    }
+  }
+  
+  .form {
+    .content {
+      margin-top: 44px;
+      & > .item:first-child {
+        font-weight: bold;
+        font-size: 18px;
+        background-color: $stable;
+        color: $positive; 
+      } 
+      
+      .input-label {
+        color: $positive;
+        font-weight: bold;
+      }
+       
+    }
+  }
+  
+}

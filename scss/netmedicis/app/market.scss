@@ -1,0 +1,48 @@
+.market {
+  
+  font-weight: 600;
+  
+  .specialty {
+    height: 55px;
+    text-align: center;
+    font-size: 25px;
+    border: 0;
+    color: white !important;
+    background-color: $positive;
+  }
+
+  .pack {
+    border: 0;
+  }
+
+  .list {
+  
+    .item {
+      
+      font-weight: 500 !important;
+      
+      &.unlock { 
+        i {
+          color: white;
+        }
+      }
+      
+      &.unlocked { 
+        i {
+          color: $balanced;
+        }
+      }  
+      
+      &.unlock,
+      &.unlocked {
+        background-color: $dark;
+        color: white;
+        text-align: center;
+        min-height: 55px;
+      }
+      
+    }
+      
+  }
+  
+}

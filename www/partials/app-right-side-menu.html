@@ -1,0 +1,13 @@
+<ion-view class="auth-side-menu" menu-close>
+  <ion-header-bar>
+    <span class="title title-center" ng-bind="credentials.email"></span>
+  </ion-header-bar>
+  <ion-content>
+    <button class="button button-full button-positive icon-right ion-android-exit logout-button" 
+      ng-click="logout()">
+      {{ 'LOGOUT' | translate }}
+    </button>
+  </ion-content>
+  <ion-header-footer>
+  </ion-header-footer>
+</ion-view>

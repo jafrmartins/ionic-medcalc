@@ -1,0 +1,20 @@
+{
+  "GFR_GENDER_TXT": "Porfavor indique o género do paciente.",
+  "GFR_GENDER_MALE": "Masculino",
+  "GFR_GENDER_FEMALE": "Feminino",
+  "GFR_RACE_TXT": "Porfavor indique qual a raça do paciente.",
+  "GFR_RACE_BLACK": "Afro-Americano",
+  "GFR_RACE_WHITEOROTHER": "Caucasiano / Outra",
+  "GFR_AGE_TXT": "Porfavor indique a idade do paciente.",
+  "GFR_AGE": "Idade",
+  "GFR_WEIGHT_TXT": "Porfavor indique o peso (kg) do paciente.",
+  "GFR_WEIGHT": "Peso (kg)",
+  "GFR_SERUM_CREATININE_TXT": "Porfavor indique a massa volúmica de creatinina sérica (mg/dL) presente na amostra.",
+  "GFR_SERUM_CREATININE": "Creatinina Sérica (mg/dL).",
+  "GFR_LABEL": "Taxa de Filtração Glomerular",
+  "GFR_UNIT": "(mL/min/1.73m²)",
+  "GFR_MDRD": "MDRD",
+  "GFR_MDRD_LABEL": "Modificação da Dieta - Estudo da Doença Renal",
+  "GFR_CKD_EPI": "CKD-EPI",
+  "GFR_CKD_EPI_LABEL": "Doença Renal Chrónica - Estudo Epidemiológico"
+}

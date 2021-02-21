@@ -1,0 +1,9 @@
+<div ng-if="wizardFormElement.options" ng-class="{
+    'list': true,
+    'error': wizardForm[wizardFormElement.name].$invalid && wizardForm[wizardFormElement.name].$dirty
+  }">
+  <ion-radio class="item-text-wrap" app-wizard-input ng-repeat="option in wizardFormElement.options"
+    tabindex={{wizardFormElement.index}} name="{{wizardFormElement.name}}"
+    ng-model="wizardFormModel[wizardFormElement.name]" ng-value="option.value"
+    ng-checked="wizardFormModel[wizardFormElement.name] == option.value ? 'checked': ''">{{ wizardFormElement.name + "_" + option.value | t | translate }}</ion-radio>
+</div>

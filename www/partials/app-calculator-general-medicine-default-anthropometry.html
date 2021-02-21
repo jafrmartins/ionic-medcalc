@@ -1,0 +1,92 @@
+<ion-pane class="calculator-output">
+  <ion-content class="anthropometry">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'ANTHROPOMETRY_LABEL' | translate }}</div>
+      <div class="units">{{ 'ANTHROPOMETRY_FORMULAS' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item bmi">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_BMI_LABEL' | translate }}</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.bmi }}</span>
+        <i class="dimension">[kg/m²]</i>
+      </div>
+      <div ng-class="{
+          'type bmi-i': (output.bmi <= 18.5),
+          'type bmi-ii': (output.bmi > 18.5 && output.bmi <= 25),
+          'type bmi-iii': (output.bmi > 25 && output.bmi <= 30),
+          'type bmi-iv': (output.bmi > 30 && output.bmi <= 35),
+          'type bmi-v': (output.bmi > 35 && output.bmi <= 40),
+          'type bmi-vi': (output.bmi > 40)
+        }">
+        <span ng-if="output.bmi <= 18.5">{{ 'ANTHROPOMETRY_BMI_CLASS_I' | translate }}</span>
+        <span ng-if="output.bmi > 18.5 && output.bmi <= 25">{{ 'ANTHROPOMETRY_BMI_CLASS_II' | translate }}</span>
+        <span ng-if="output.bmi > 25 && output.bmi <= 30">{{ 'ANTHROPOMETRY_BMI_CLASS_III' | translate }}</span>
+        <span ng-if="output.bmi > 30 && output.bmi <= 35">{{ 'ANTHROPOMETRY_BMI_CLASS_IV' | translate }}</span>
+        <span ng-if="output.bmi > 35 && output.bmi <= 40">{{ 'ANTHROPOMETRY_BMI_CLASS_V' | translate }}</span>
+        <span ng-if="output.bmi > 40">{{ 'ANTHROPOMETRY_BMI_CLASS_VI' | translate }}</span>
+      </div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item hwr">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_HWR_LABEL' | translate }}</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.hwr }}</span>
+        <i class="dimension">[cm/cm]</i>
+      </div>
+      <div class="type abd-cir" ng-if="(
+          input.anthropometryGender == 'male' && input.anthropometryAbdominalCircunference >= 102
+        ) || (
+          input.anthropometryGender == 'female' && input.anthropometryAbdominalCircunference >= 88
+        )"><span>{{ 'ANTHROPOMETRY_ABD_CIR' | translate }}</span>
+      </div>
+      <!--<div class="type abd-cir-male" ng-if="input.anthropometryGender == 'female' && input.anthropometryAbdominalCircunference >= 88">
+        <span>{{ 'ANTHROPOMETRY_ABD_CIR_MALE' | translate }}</span>
+      </div>
+      <div class="type abd-cir-female" ng-if="input.anthropometryGender == 'male' && input.anthropometryAbdominalCircunference >= 102">
+        <span>{{ 'ANTHROPOMETRY_ABD_CIR_FEMALE' | translate }}</span>
+      </div>-->
+    </div>
+    <div class="item item-text-wrap calculator-output-item bs">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_BODYSURFACE_LABEL' | translate }}</div>
+        <div class="legend">&nbsp;(&nbsp;Dubois, Dubois&nbsp;)&nbsp;</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.bs }}</span>
+        <i class="dimension">[m²]</i>
+      </div>
+    </div>
+    <!--<div class="item item-text-wrap calculator-output-item mosteller">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_BODYSURFACE_LABEL' | translate }}</div>
+        <div class="legend">&nbsp;(&nbsp;Mosteller&nbsp;)&nbsp;</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.mosteller }}</span>
+        <i class="dimension">[m²]</i>
+      </div>
+    </div>-->
+    <!--<div class="item item-text-wrap calculator-output-item haycock">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_BODYSURFACE_LABEL' | translate }}</div>
+        <div class="legend">&nbsp;(&nbsp;Haycock&nbsp;)&nbsp;</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.haycock }}</span>
+        <i class="dimension">[m²]</i>
+      </div>
+    </div>-->
+    <div class="item item-text-wrap calculator-output-item pi">
+      <div class="header">
+        <div class="label">{{ 'ANTHROPOMETRY_PONDERAL_INDEX_LABEL' | translate }}</div>
+      </div>
+      <div class="value">
+        <span class="number">{{ output.ponderalIndex }}</span>
+        <i class="dimension">[kg/m³]</i>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

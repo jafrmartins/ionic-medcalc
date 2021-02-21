@@ -1,0 +1,23 @@
+{
+  "ESCOLHA_ACO_AGE_TXT": "Escolha a faixa etária adequada",
+  "ESCOLHA_ACO_AGE_COMMENT": "Idade superior a 65 anos implica uma pontuação CHA²DS²-VASc superior a 1.",
+  "ESCOLHA_ACO_AGE_<65": "<65 anos",
+  "ESCOLHA_ACO_AGE_>=65": ">=65 anos",
+  "ESCOLHA_ACO_ETIOL_TXT": "Seleccione o tipo de fibrilação auricular.",
+  "ESCOLHA_ACO_ETIOL_NOT_VALVULAR": "Não Valvular",
+  "ESCOLHA_ACO_ETIOL_VALVULAR": "Valvular",
+  "ESCOLHA_ACO_ETIOL_ISOLATED": "Isolada",
+  "ESCOLHA_ACO_CHA2DS2_VASC_SCORE_TXT": "Indique a pontuação CHA²DS²-VASc",
+  "ESCOLHA_ACO_CHA2DS2_VASC_SCORE": "Pontuação CHA²DS²-VASc",
+  "ESCOLHA_ACO_LABEL": "Escolha da Anti-coagulação Oral",
+  "ESCOLHA_ACO_LEGEND": "Terapêutica anti-trombótica e de Anti-Coagulação Oral",
+  "ESCOLHA_ACO_MED_LABEL": "Medicação Recomendada",
+  "ESCOLHA_ACO_MED_LEGEND": "Nota: A preferência do doente deve ser tida em consideração.",
+  "ESCOLHA_ACO_VITAMIN_K_ANTAGONIST": "Antagonista da Vitamina K",
+  "ESCOLHA_ACO_WITHOUT_ANTITHROMBOTIC_THERAPY": "Sem terapêutica anti-trombótica",
+  "ESCOLHA_ACO_ORAL_ANTICOAGULATION": "Anti-coagulação Oral",
+  "ESCOLHA_ACO_MED_II":"Recomendada a utilização dos NOAC (*) en vez dos AVK.",
+  "ESCOLHA_ACO_MED_I": "Utilizar os NOAC (*) ou os AVK",
+  "ESCOLHA_ACO_MED2_II": "(*) Apixabano, Riveroxabano ou Dabigatrano",
+  "ESCOLHA_ACO_MED2_I": "(*) Apixabano ou Dabigatrano."
+}

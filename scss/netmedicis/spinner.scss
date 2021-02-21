@@ -1,0 +1,16 @@
+#spinner-container {
+    
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  height: 85px;
+  text-align: center;
+  
+  & > .spinner svg {
+    width: 50px !important;
+    height: 50px !important;
+    stroke: $positive !important;
+    fill: $positive !important;
+  }
+
+}

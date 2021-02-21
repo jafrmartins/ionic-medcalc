@@ -1,0 +1,46 @@
+<ion-view class="wizard" view-title="{{ 'FORM_CALCULATOR_INPUT' | translate }}">
+  <div class="slides-response" ng-if="wizard.response.schema">
+    <ion-content id="spinner-container" ng-show="!wizard.loaded"
+      scroll="false" class="has-header has-footer">
+      <ion-spinner icon="android"></ion-spinner>
+    </ion-content>
+    <ion-content scroll="false" class="slides has-header has-footer" ng-show="wizard.loaded">
+      <form class="wizard-form" name="wizard.form" novalidate>
+        <ion-slides class="wizard-slides" slider="swiper" options="options">
+          <ion-slide-page class="input-slide" ng-repeat="el in wizard.response.schema.slides">
+            <ion-content scroll="true" ng-class="{
+              'error': wizard.form[el.name].$invalid && wizard.form[el.name].$dirty
+            }">
+              <div class="item item-text-wrap question">
+                {{ el.name + "-txt" | t | translate }}
+                <div class="small" ng-if="el.comment">
+                  {{ el.name + '-comment' | t | translate }}
+                </div>
+              </div>
+              <div class="item">
+                <div ng-init="el.index=$index" wizard-form="wizard.form" wizard-form-model="wizard.data" app-wizard-form-element="el"></div>
+              </div>
+            </ion-content>
+          </ion-slide-page>
+        </ion-slides>
+      </form>
+    </ion-content>
+    <ion-footer-bar class="footer" ng-show="wizard.loaded">
+      <div class="wizard-footer-pagination"></div>
+      <button ng-if="swiper" app-wizard-exit-button="exit()" swiper="swiper" class="button exit">
+        <span>{{ 'FORM_WIZARD_EXIT' | translate}}</span>
+        <i class="ion-android-exit"></i>
+      </button>
+      <button ng-if="swiper" app-wizard-previous-button="previous()" swiper="swiper" class="button previous">
+        <i class="ion-chevron-left"></i>
+      </button>
+      <button ng-if="swiper" app-wizard-next-button="next()" swiper="swiper" class="button next" ng-disabled="!isNextAvailable()">
+        <i class="ion-chevron-right"></i>
+      </button>
+      <button ng-if="swiper" app-wizard-continue-button="continue()" swiper="swiper" class="button continue" ng-disabled="!isNextAvailable()">
+        <span>{{ 'FORM_WIZARD_CONTINUE' | translate}}</span>
+        <i class="ion-arrow-right-c"></i>
+      </button>
+    </ion-footer-bar>
+  </div>
+</ion-view>

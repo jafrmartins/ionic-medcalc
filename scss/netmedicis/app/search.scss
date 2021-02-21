@@ -1,0 +1,122 @@
+.search {
+
+  .search-footer {
+    height: 50px;
+    padding: 0px;
+  }
+  
+  .app-search-input {
+    
+    padding: 9px;
+    border-color: transparent;
+    border: 0px;
+    background-color: $positive;
+    min-height: 55px !important;
+    width: 100%;
+    
+    span.first {
+      .q {
+        width: 90%;
+        font-size: 20px;
+        &::-webkit-input-placeholder {
+          padding-left: 5px;
+          color: $stable;
+          font-weight: 100;
+        }
+        
+      }
+    }
+    
+    span.second {
+      margin-top: -32.5px;
+      z-index: 999;
+      position: absolute;
+      right: 0px;
+      .q-icon {
+        font-weight: 900;
+        font-size: 30px;
+        color: white;
+        margin: 10px;
+      }
+    }
+    
+  }
+  
+  .list {
+    background-color: $positive;
+  }
+
+  .bibliography {
+    margin-top: 10px;
+    .item {
+      font-size: 9px;
+      font-style: italic;
+    }
+  }
+  
+  .specialty {
+    height: 55px;
+    text-align: center;
+    font-size: 25px;
+    border: 0;
+    color: white !important;
+    background-color: $positive;
+  } 
+
+  div[item="true"],
+  ion-item[item="true"] {
+  
+    min-height: 125px;
+    background-color: rgba(255, 255, 255, 0.90);
+    
+    .button {
+      i {
+        color: white !important;
+      }  
+    }
+    
+    .specialty,
+    .package {
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    
+    .title,
+    .description,
+    .tags, 
+    .list.bibliography,
+    .list.bibliography > .item {
+      padding: 5px;
+    }
+
+    .list {
+      background: transparent;
+    }
+
+    .title {
+      font-weight: 900;
+    }
+
+    .tags {
+      span {
+        &.tag {
+          margin-right: 2.5px;
+          font-size: 9px;
+          padding: 2.5px 5px 2.5px 5px;
+          border-radius: 2.5px;
+          color: white;
+          font-weight: 900;
+          background-color: $positive;
+          &.specialty {
+            background-color: $positive;
+          }
+          &.package {
+            background-color: $calm;
+          }
+        } 
+      }
+    }
+    
+  }
+  
+}

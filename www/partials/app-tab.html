@@ -1,0 +1,16 @@
+<ion-tabs class="tabs-striped tabs-icon-top tabs-color-positive tabs-bottom calculator">
+  
+  <auth-credentials></auth-credentials>
+  
+  <div ng-if="credentials">
+    
+    <ion-tab ng-repeat="tab in tabs" title="{{ 'FORM_CALCULATOR_' + tab.name.toUpperCase() | translate }}" 
+      icon-off="{{tab.iconOff}}" 
+      icon-on="{{tab.iconOn}}" 
+      ng-click="$state.go(tab.state, $stateParams)">
+      <ion-nav-view name="{{tab.name}}"></ion-nav-view>
+    </ion-tab>
+    
+  </div>
+
+</ion-tabs>

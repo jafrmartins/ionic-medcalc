@@ -1,0 +1,36 @@
+<ion-pane class="calculator-output">
+  <ion-content class="probabilidade-hta" ng-init="display.selectedValue=output[display.selectedItem]">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'PROB_HTA_LABEL' | translate }}</div>
+      <div class="units">{{ 'PROB_HTA_LEGEND' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item hta-prevision">
+      <div class="header">
+        <div class="label">{{ "PROB_HTA_PREVISION_LABEL" | translate }}</div>
+        <div class="legend">{{ "PROB_HTA_PREVISION_LEGEND" | translate }}</div>
+        <div class="legend select-box">
+          <label class="item item-input item-select" ng-if="display.selectedValue<100">
+            <select id="prob-hta-select" ng-model="display.selectedItem" ng-change="display.selectedValue=output[display.selectedItem]"
+              ng-options="i.value as ( i.label | translate ) for i in display.selectedOptions">
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="value">
+        <span>{{ display.selectedValue }}<i class="percent"></i></span>
+      </div>
+      <div class="type" ng-if="display.selectedValue==100">
+        {{ 'PROB_HTA_HTA_EXISTS' | translate }}
+      </div>
+      <div ng-if="display.selectedValue<100" ng-class="{ 
+        'type low': (display.selectedValue < 5), 
+        'type moderate': (display.selectedValue < 10 && display.selectedValue >= 5),
+        'type high': (display.selectedValue >= 10) 
+      }">
+        <span ng-if="display.selectedValue < 5">{{ 'PROB_HTA_RISK_LOW' | translate }}</span>
+        <span ng-if="display.selectedValue < 10 && display.selectedValue >= 5">{{ 'PROB_HTA_RISK_MODERATE' | translate }}</span>
+        <span ng-if="display.selectedValue >= 10">{{ 'PROB_HTA_RISK_HIGH' | translate }}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

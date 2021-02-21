@@ -1,0 +1,42 @@
+<ion-view title="{{ 'SEARCH' | translate }}" class="search" >
+  <auth-credentials></auth-credentials>
+  <div ng-if="credentials">
+    <div ng-if="calculators" ng-init="specialty=undefined">
+      <!--<ion-content ng-show="!appLoading" id="spinner-container" scroll="false" class="has-header has-footer">
+        <ion-spinner icon="android"></ion-spinner>
+      </ion-content>-->
+      <ion-content class="has-footer">
+        <ion-list>
+          <div ng-repeat="item in calculators | calculator:q">
+            <ion-item ng-if="item.isSpecialty" class="item-text-wrap specialty">
+              <span class="title">{{ item.title | capitalize | translate }}</span>
+            </ion-item>
+            <ion-item ng-if="!item.isSpecialty" item="true" class="item-text-wrap calc" ng-click="go('app.wizard', item.params)">
+              <div class="title">{{ item.title | translate }}</div>
+              <div class="description">{{ item.description | translate }}</div>
+              <div class="list bibliography">
+                <div class="item" ng-repeat="ref in item.bibliography">
+                  <span class="title"><span class="index">{{ $index + 1 }}&nbsp;)&nbsp;</span>{{ ref.title }}</span>
+                </div>
+              </div>
+            </ion-item>
+          </div>
+        </ion-list>
+        <ion-infinite-scroll ng-if="moreData" distance="2"
+          on-infinite="loadMoreData()">
+        </ion-infinite-scroll>
+      </ion-content>
+      <ion-footer-bar class="search-footer">
+        <!--<div class="item-text-wrap app-search-input item">
+          <span class="first">
+            <input type="text" class="q" ng-model="q"
+              placeholder="{{ 'SEARCH' | translate }}"/>
+          </span>
+          <span class="second">
+            <i class="ion-icon ion-ios-search-strong q-icon"></i>
+          </span>
+        </div>-->
+      </ion-footer-bar>
+    </div>
+  </div>
+</ion-view>

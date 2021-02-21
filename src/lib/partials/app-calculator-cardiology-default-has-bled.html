@@ -1,0 +1,25 @@
+<ion-pane class="calculator-output">
+  <ion-content class="has-bled">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'HAS_BLED_LABEL' | translate }}</div>
+      <div class="units">{{ 'HAS_BLED_LEGEND' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item score">
+      <div class="header">
+        <div class="label">{{ 'HAS_BLED_SCORE_LABEL' | translate }}</div>
+        <!--<div class="legend">{{ 'HAS_BLED_SCORE_LEGEND' | translate }}</div>-->
+      </div>
+      <div class="value" ng-bind="output.score"></div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item anual-risk">
+      <div class="header">
+        <div class="label">{{ 'HAS_BLED_ANUAL_RISK_LABEL' | translate }}</div>
+        <!--<div class="legend">{{ 'HAS_BLED_ANUAL_RISK_LEGEND' | translate }}</div>-->
+      </div>
+      <div class="value">{{ 'HAS_BLED_' + output.anualRisk | translate }}<i class="percent"></i></div>
+      <div class="type {{output.riskGroup.toLowerCase()}}">
+        <span>{{ 'HAS_BLED_' + output.riskGroup + '_RISK_SUGGESTION' | translate }}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

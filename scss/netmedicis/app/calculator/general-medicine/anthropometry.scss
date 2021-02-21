@@ -1,0 +1,85 @@
+.anthropometry {
+
+	.bmi {
+    
+		.header {
+			.label::after,
+			.legend::before {
+				content: '1)';
+			}
+		}
+		
+		.type {
+			&.bmi-i {
+				background-color: $calm !important;
+			}
+			&.bmi-ii {
+				background-color: $balanced !important;
+			}
+			&.bmi-iii {
+				background-color: $danger !important;
+			}
+			&.bmi-iv {
+				background-color: $energized !important;
+			}
+			&.bmi-v {
+				background-color: $assertive !important;
+			}
+			&.bmi-vi {
+				background-color: $royal !important;
+			}
+		}
+
+  }
+
+	.bs {
+		.header {
+			.label::after,
+			.legend::before {
+				content: '2)';
+			}
+		}
+	}
+
+	.mosteller {
+		.header {
+			.label::after,
+			.legend::before {
+				content: '3)';
+			}
+		}
+	}
+
+	.haycock {
+		.header {
+			.label::after,
+			.legend::before {
+				content: '4)';
+			}
+		}	
+	}
+
+	.hwr {
+		.header {
+			.label::after,
+			.legend::before {
+				content: '5)';
+			}
+		}
+		.type {
+			&.abd-cir {
+				background-color: $royal !important;
+			}
+		}
+	}
+
+	.pi {
+		.header {
+			.label::after,
+			.legend::before {
+				content: '6)';
+			}
+		}
+	}
+
+}

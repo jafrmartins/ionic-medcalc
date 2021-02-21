@@ -1,0 +1,21 @@
+.glomerular-filtration-rate {
+
+	.mdrd {
+		.label::after {
+			content: '1)';
+		}
+		.legend::before {
+			content: '1)';
+		}
+	}
+
+  .ckd-epi {
+		.label::after {
+			content: '2)';
+		}
+		.legend::before {
+			content: '2)';
+		}
+  }
+
+}

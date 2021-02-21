@@ -1,0 +1,29 @@
+.escolha-aco {
+
+  .aco {
+
+    .header {
+			.label::after,
+			.legend::before {
+				content: '1)';
+			}
+		}
+
+    .value {
+      font-size: 30px !important;
+    }
+
+    .type {
+      span {
+        font-size: 14px;
+        &.med-comment {
+          font-size: 12px;
+          font-style: italic;
+          display: block;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+}

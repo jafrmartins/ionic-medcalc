@@ -1,0 +1,12 @@
+<ion-view class="calculator-about" view-title="{{ 'FORM_CALCULATOR_ABOUT' | translate }}">
+  <ion-pane ng-if="calculator">
+    <ion-content>
+      <div class="list">
+        <div class="item item-text-wrap publication"
+          ng-repeat="publication in calculator.bibliography">
+          <span class="title"><span class="index">{{ $index + 1 }}&nbsp;)&nbsp;</span>{{ publication.title }}</span>
+          </div>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-view>

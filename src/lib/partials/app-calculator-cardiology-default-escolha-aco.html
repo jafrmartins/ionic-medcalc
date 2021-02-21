@@ -1,0 +1,19 @@
+<ion-pane class="calculator-output">
+  <ion-content class="escolha-aco">
+    <div class="item item-text-wrap calculator-output-header">
+      <div class="title">{{ 'ESCOLHA_ACO_LABEL' | translate }}</div>
+      <div class="units">{{ 'ESCOLHA_ACO_LEGEND' | translate }}</div>
+    </div>
+    <div class="item item-text-wrap calculator-output-item aco">
+      <div class="header">
+        <div class="label">{{ 'ESCOLHA_ACO_MED_LABEL' | translate }}</div>
+        <!--<div class="legend">{{ 'ESCOLHA_ACO_MED_LEGEND' | translate }}</div>-->
+      </div>
+      <div class="value">{{ 'ESCOLHA_ACO_' + output.aco | translate }}</div>
+      <div ng-if="output.med" class="type">
+        <span>{{ 'ESCOLHA_ACO_' + output.med | translate }}</span>
+        <span class="med-comment" ng-if="output.med2">{{ 'ESCOLHA_ACO_' + output.med2 | translate }}</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

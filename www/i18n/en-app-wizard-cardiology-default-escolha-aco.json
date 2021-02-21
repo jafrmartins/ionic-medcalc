@@ -1,0 +1,23 @@
+{
+  "ESCOLHA_ACO_MED_LABEL": "Recommended Medication",
+  "ESCOLHA_ACO_MED_LEGEND": "Nota: Patient's preference should be considered.",
+  "ESCOLHA_ACO_AGE_TXT": "Please choose an apropriate age interval",
+  "ESCOLHA_ACO_AGE_COMMENT": "An age greater than 65 years old implies a CHA²DS²-VASc Score greater than one.",
+  "ESCOLHA_ACO_AGE_<65": "<65 years",
+  "ESCOLHA_ACO_AGE_>=65": ">=65 years",
+  "ESCOLHA_ACO_ETIOL_TXT": "Please select the patient's auricular fibrilation type.",
+  "ESCOLHA_ACO_ETIOL_NOT_VALVULAR": "Not Valvular",
+  "ESCOLHA_ACO_ETIOL_VALVULAR": "Valvular",
+  "ESCOLHA_ACO_ETIOL_ISOLATED": "Isolated",
+  "ESCOLHA_ACO_CHA2DS2_VASC_SCORE_TXT": "Please indicate the patient's CHA²DS²-VASc Score",
+  "ESCOLHA_ACO_CHA2DS2_VASC_SCORE": "CHA²DS²-VASc Score",
+  "ESCOLHA_ACO_LABEL": "Oral Anti-Coagolation Drugs",
+  "ESCOLHA_ACO_LEGEND": "Stroke Prevention and Oral Anti-Coagolation Drugs",
+  "ESCOLHA_ACO_VITAMIN_K_ANTAGONIST": "Vitamin K Antagonist",
+  "ESCOLHA_ACO_WITHOUT_ANTITHROMBOTIC_THERAPY": "Without antithrombotic therapeutic",
+  "ESCOLHA_ACO_ORAL_ANTICOAGULATION": "Oral Anti-coagulation",
+  "ESCOLHA_ACO_MED_II":"NOAC (*) usage preferred to AVK usage",
+  "ESCOLHA_ACO_MED_I": "NOAC (*) or AVK usage is recommended",
+  "ESCOLHA_ACO_MED2_II": "(*) Apixabane, Riveroxabane ou Dabigatrane",
+  "ESCOLHA_ACO_MED2_I": "(*) Apixabane ou Dabigatrane."
+}

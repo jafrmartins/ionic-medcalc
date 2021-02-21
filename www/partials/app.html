@@ -1,0 +1,28 @@
+<ion-side-menus enable-menu-with-back-views="true" class="app">
+  <auth-credentials></auth-credentials>
+  <div ng-if="credentials">
+    <ion-side-menu-content>
+      <ion-header-bar>
+        <ion-nav-bar>
+          <ion-nav-buttons side="left">
+            <button class="button button-clear" menu-toggle="left">
+              <img class="logo" src="{{logo}}" />
+            </button>
+          </ion-nav-buttons>
+          <ion-nav-buttons side="right">
+            <button class="button button-clear" menu-toggle="right">
+              <i class="fa fa-user-md"></i>
+            </button>
+          </ion-nav-buttons>
+        </ion-nav-bar>
+      </ion-header-bar>
+      <ion-nav-view name="content"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" width="50">
+      <app-left-side-menu></app-left-side-menu>
+    </ion-side-menu>
+    <ion-side-menu side="right">
+      <app-right-side-menu></app-right-side-menu>
+    </ion-side-menu>
+  </div>
+</ion-side-menus>

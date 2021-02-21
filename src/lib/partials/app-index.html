@@ -1,0 +1,32 @@
+<ion-view title="{{ 'SEARCH' | translate }}" class="search">
+  <ion-content>
+    <div ng-if="credentials">
+      <ion-list>
+        <div class="item-text-wrap app-search-input item">
+          <span class="first">
+            <input type="text" class="q" ng-model="q"
+              placeholder="{{ 'SEARCH' | translate }}"/>
+          </span>
+          <span class="second">
+            <i class="ion-icon ion-ios-search-strong q-icon"></i>
+          </span>
+        </div>
+        <div item="true" class="item item-text-wrap" ng-if="!index.length">
+          <span class="title">{{ 'EMPTY_ACCOUNT' | translate }}</span>
+          </div>
+        </div>
+        <ion-item item="true" class="item-text-wrap"
+          ng-if="index.length"
+          ng-click="go('app.wizard', item.params)"
+          ng-repeat="item in index | calculator:q">
+            <div class="title">{{ item.title | translate }}</div>
+            <div class="description">{{ item.description | translate }}</div>
+            <div class="tags">
+              <span class="tag {{tag.class || ''}}" ng-repeat="tag in item.tags">{{ tag.title | translate }}</span>
+            </div>
+          </div>
+        </ion-item> 
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
